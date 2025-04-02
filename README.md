@@ -2,7 +2,7 @@
 ## Contexte
 La petite entreprise BatiExperts souhaite améliorer son suivi des commandes. Actuellement, les commandes sont gérées sur un carnet, ce qui entraîne erreurs et oublis. L'objectif de cette application est de développer un système permettant de : 
 - **Gérer les clients** (nom, email, téléphone)
-- **Enregistrer et suivre des commandes** (chaque commande est liée à un client et a un statut : "en attente", "expédiée", "livrée").
+- **Enregistrer et suivre des commandes** (chaque commande est liée à un client et a un titre et un statut : "en attente", "expédiée", "livrée").
 
 ### Relation :
 Un client peut passer plusieurs commandes
