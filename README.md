@@ -26,14 +26,16 @@ Une commande appartient à un seul client
 |  |- /templates
 |  |  |- footer.php
 |  |  |- header.php
-|  |- client-create.php
-|  |- client-edit.php
-|  |- client-list.php
-|  |- client-view.php
-|  |- order-create.php
-|  |- order-edit.php
-|  |- order-list.php
-|  |- order-view.php
+|  |-/client
+|  |  |- client-create.php
+|  |  |- client-edit.php
+|  |  |- client-list.php
+|  |  |- client-view.php
+|  |-/orders
+|  |  |- order-create.php
+|  |  |- order-edit.php
+|  |  |- order-list.php
+|  |  |- order-view.php
 |  |- home.php
 |- index.php
 |- README.md
