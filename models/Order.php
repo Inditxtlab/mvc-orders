@@ -1,6 +1,5 @@
 <?php 
 
-use Vtiful\Kernel\Format;
 require_once __DIR__ . '/../lib/database.php';
 
 class Order{

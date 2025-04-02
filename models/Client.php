@@ -31,7 +31,26 @@ class Client{
         return $this->date_modif->format('Y-m-d H:i:s');
     }
 
+    public function setId(int $id){
+        $this->id = $id;
+    }
 
+    public function setName(string $name){
+        $this->name = $name;
+    }
+    public function setEmail(string $email){
+        $this->email = $email;
+    }
+    public function setTelephone(string $telephone){
+        $this->telephone = $telephone;
+    }
 
+    public function setDate_creation(DateTime $date_creation): void{
+        $this->date_creation = $date_creation;
+    }
+
+    public function setDate_modif(DateTime $date_modif): void{
+        $this->date_modif = $date_modif;
+    }
 
 }

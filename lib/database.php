@@ -1,19 +1,19 @@
 <?php
 
 class DatabaseConnection{
-    private  ?\PDO $database = null;
+    private  ?\PDO $database=null;
 
     public function getConnection(): PDO{
 
         if ($this->database == null){
             $host = 'localhost';
-            $dbname = 'mvc-orders';
+            $dbname = 'mvc_orders';
             $username = 'root';
-            $password = "";
-            $charset = "utf8mb4";
+            $password = '';
+            $charset = 'utf8mb4';
 
 
-            $dsn = "mysql:host= $host; dbname=$dbname; charset=$charset";
+            $dsn = "mysql:host=$host; dbname=$dbname; charset=$charset";
 
             $options = [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -21,12 +21,14 @@ class DatabaseConnection{
             ];
 
             try {
-                $this->database = NEW PDO($dsn, $username, $password, $options);
+                $this->database = new PDO($dsn, $username, $password, $options);
             } catch (PDOException $e) {
-                die('Erreur de connexion à la base de donnees :'.$e->getMessage());
+                die('Erreur de connexion à la base de donnees :' . $e->getMessage());
             }
         }
         return $this->database;
     }
     
 }
+
+
