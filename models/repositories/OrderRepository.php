@@ -1,6 +1,9 @@
 <?php 
 
 require_once __DIR__ . '/../lib/database.php';
+require_once __DIR__ .'/../Order.php'; 
+require_once __DIR__ .'/../Client.php'; 
+
 class OrderRepository{
    
     public DatabaseConnection $connection; 
@@ -49,6 +52,5 @@ public function getOrder(int $id): ? Order
 
 
 }
-
 
 }
