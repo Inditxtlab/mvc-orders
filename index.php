@@ -2,15 +2,13 @@
 
 require_once __DIR__ .'/lib/database.php';
 
-require_once __DIR__ .'/repositories/OrderRepository.php'; 
-
-
 require_once __DIR__ . '/models/Order.php'; 
+require_once __DIR__ . '/models/repositories/OrderRepository.php';
 
 var_dump("salut"); 
-// $db = new DatabaseConnection();
+$db = new DatabaseConnection();
 
-$client = $db->getConnection()->query('SELECT name FROM client')->fetchAll();
+ $client= $db->getConnection()->query('SELECT name FROM client')->fetchAll();
 
 var_dump($client);
 
