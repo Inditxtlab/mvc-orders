@@ -1,6 +1,7 @@
 <?php 
 
-require_once __DIR__ . '/../lib/database.php';
+require_once __DIR__ . '/../../lib/database.php';
+require_once __DIR__ .'/../Order.php';
 class OrderRepository{
    
     public DatabaseConnection $connection; 

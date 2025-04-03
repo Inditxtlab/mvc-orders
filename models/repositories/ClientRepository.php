@@ -48,4 +48,41 @@ class ClientRepository{
 
         return $client;
     }
+
+    public function create(Client $client): bool
+    {
+        $statement = $this->connection
+                ->getConnection()
+                ->prepare('INSERT INTO  (name, email, telephone) VALUES (:name, :email, :telephone);');
+
+        return $statement->execute([
+            'name' => $client->getName(),
+            'email' => $client->getEmail(),
+            'telephone' => $client->getTelephone()
+        ]);
+    }
+
+    public function update(Client $client): bool
+    {
+        $statement = $this->connection
+                ->getConnection()
+                ->prepare('UPDATE client SET name = :name, email = :email, telephone = :telephone WHERE id = :id');
+
+        return $statement->execute([
+            'id' => $client->getId(),
+            'name' => $client->getName(),
+            'email' => $client->getEmail(),
+            'telephone' => $client->getTelephone()
+        ]);
+    }
+
+    public function delete(int $id): bool
+    {
+        $statement = $this->connection
+                ->getConnection()
+                ->prepare('DELETE from client WHERE id = :id');
+        $statement->bindParam(':id',$id);
+
+        return $statement->execute();
+    }
 }
