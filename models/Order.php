@@ -50,9 +50,9 @@ public function setCreatedAt(Datetime $createdAt): void
 {
     $this->createdAt = $createdAt; 
 }
-public function setUpdateAt(Datetime $updateAt): void
+public function setUpdateAt(Datetime $updatedAt): void
 {
-    $this->updatedAt; 
+    $this->updatedAt=$updatedAt; 
 }
 
 }
