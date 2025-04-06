@@ -42,9 +42,9 @@ class ClientRepository{
         $client->setId($result['id']);
         $client->setName($result['name']);
         $client->setEmail($result['email']);
-            $client->setTelephone($result['telephone']);
-            $client->setDate_creation(date_create_from_format( 'Y-m-d H:i:s',$result['date_creation']));
-            $client->setDate_modif(date_create_from_format( 'Y-m-d H:i:s',$result['date_modif']));
+        $client->setTelephone($result['telephone']);
+        $client->setDate_creation(date_create_from_format( 'Y-m-d H:i:s',$result['date_creation']));
+        $client->setDate_modif(date_create_from_format( 'Y-m-d H:i:s',$result['date_modif']));
 
         return $client;
     }
@@ -53,7 +53,7 @@ class ClientRepository{
     {
         $statement = $this->connection
                 ->getConnection()
-                ->prepare('INSERT INTO  (name, email, telephone) VALUES (:name, :email, :telephone);');
+                ->prepare('INSERT INTO client (name, email, telephone) VALUES (:name, :email, :telephone);');
 
         return $statement->execute([
             'name' => $client->getName(),

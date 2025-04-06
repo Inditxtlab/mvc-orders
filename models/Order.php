@@ -6,6 +6,7 @@ class Order{
     private int $id; 
     private $title; 
     private $status; 
+    private int $clientId;
     private DateTime $createdAt; 
     private DateTime $updatedAt; 
 
@@ -23,19 +24,30 @@ public function getTitle(): string
 public function getStatus(): string{
     return $this->status; 
 }
+
+public function getClientId():int
+{
+    return $this->clientId; 
+
+}
 public function getCreatedAt(): string
 {
-    return $this->createdAt->format(DATE_RSS);
+    return $this->createdAt->format('Y-m-d H:i:s');
 }
 
 public function getUpdateAt(): string
 {
-    return $this->updatedAt->format(DATE_RSS); 
+    return $this->updatedAt->format('Y-m-d H:i:s'); 
 }
 
-public function setId(int $id):void
+public function setId(int $id): void
 {
     $this->id = $id; 
+}
+
+public function setClientId(int $clientId): void
+{
+    $this->clientId = $clientId; 
 }
 public function setTitle(string $title): void
 {
@@ -44,7 +56,7 @@ public function setTitle(string $title): void
 
 public function setStatus(string $status): void
 {
-    $this->title= htmlspecialchars($status);
+    $this->status = htmlspecialchars($status);
 }
 public function setCreatedAt(Datetime $createdAt): void
 {

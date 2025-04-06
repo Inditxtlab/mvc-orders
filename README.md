@@ -11,6 +11,7 @@ Une commande appartient à un seul client
 ```
 /mvc-orders
 |- /controllers
+|  |- AccueilController.php
 |  |- ClientController.php 
 |  |- OrderController.php
 |- /lib
@@ -37,6 +38,7 @@ Une commande appartient à un seul client
 |  |  |- order-list.php
 |  |  |- order-view.php
 |  |- home.php
+|  |- 404.php
 |- index.php
 |- README.md
 ```
